@@ -17,7 +17,7 @@ function loadJSON() {
 
             for (let product of productList) {
                 html += `
-                <div class="col d-flex justify-content-center mb-4 item-container ${product.gender}">
+                <div class="col d-flex justify-content-center mb-4 item-container ${product.gender} wow animate__fadeIn">
                     <div class="card shadow mb-2 bg-dark text-light" style="width: 18rem;">
                         <h5 class="card-title p-2 text-center">${product.title}</h5>
                         <img src="${product.img}" class="card-img bg-light" alt="...">
@@ -61,13 +61,11 @@ function loadJSON() {
                     title: itemTitle,
                     precio: itemPrice,
                     img: itemImg,
+                    stock: itemQtty,
                     cantidad: 1
-
                 };
 
                 addItemToCart(newItem);
-                
-
 
                 Swal.fire({
                     icon: 'success',
@@ -115,15 +113,16 @@ function loadJSON() {
                     tr.classList.add("cart-item");
                     const content = `
                 <th scope="row">1</th>
-                  <td class="table--producto d-flex">
-                    <img src=${item.img} alt="">
+                  <td class="table--producto d-flex flex-column">
+                    <img class="img" src=${item.img} alt="">
                     <h6 class="title">${item.title}</h6>
+                    <span class="text-muted">Stock: ${item.stock}</span>
                   </td>
                   <td class="table--precio">
                     <p>$ ${item.precio}.-</p>
                   </td>
                   <td class="table--cantidad">
-                    <input type="number" min="1" value=${item.cantidad} class="me-3 input-element">
+                    <input type="number" max="${item.stock}" min="1" value="${item.cantidad}" class="me-3 input-element">
                     <button class="delete btn btn-danger"><i class="fas fa-trash"></i></button>
                   </td>
                   `;
@@ -163,10 +162,6 @@ function loadJSON() {
             // Boton para remover item
 
             function itemRemoveCart(e) {
-                const deleteButton = e.target;
-                const tr = deleteButton.closest(".cart-item");
-                const title = tr.querySelector(".title").textContent;
-                
                 Swal.fire({
                     title: 'Estás seguro que deseas quitar el producto?',
                     icon: 'warning',
@@ -177,6 +172,10 @@ function loadJSON() {
                   })
                   .then((result) => {
                     if (result.isConfirmed) {
+                        const deleteButton = e.target;
+                        const tr = deleteButton.closest(".cart-item");
+                        const title = tr.querySelector(".title").textContent;
+
                         for (let i = 0; i < cart.length; i++) {
 
                             if (cart[i].title.trim() === title.trim()) {
@@ -291,6 +290,17 @@ function loadJSON() {
                 }
             }
 
+
+            // Actualizar json al comprar
+
+            const buyButton = document.querySelector(".button-buy");
+
+            buyButton.addEventListener("click", updateJson);
+
+            function updateJson() {
+                
+            }
+            
 
 
         })
