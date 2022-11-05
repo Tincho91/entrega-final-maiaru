@@ -243,10 +243,10 @@ function loadJSON() {
                 let allElements = document.querySelectorAll(".item-container");
 
                 for (let elements of allElements) {
-                    elements.classList.add("visible");
                     if (elements.classList.contains("hidden")){
                         elements.classList.remove("hidden");
                     }
+                    elements.classList.add("visible");
                 }
             }
 
@@ -289,18 +289,6 @@ function loadJSON() {
                     elements.classList.add("hidden");
                 }
             }
-
-
-            // Actualizar json al comprar
-
-            const buyButton = document.querySelector(".button-buy");
-
-            buyButton.addEventListener("click", updateJson);
-
-            function updateJson() {
-                
-            }
-            
 
 
         })
