@@ -1,0 +1,15 @@
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.home-title {
+    margin-top: 3rem;
+}
+
+.img-fluid {
+    margin-top: 3rem;
+}

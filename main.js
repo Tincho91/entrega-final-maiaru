@@ -38,7 +38,7 @@ function loadJSON() {
 
 //////////////////////////////////////////////////////////
 
-        .then(returnedData => {
+        .then( () => {
             const addtoCartButton = document.querySelectorAll("#button-buy");
             const tableBody = document.querySelector(".table-body");
             let cart = [];
@@ -163,37 +163,37 @@ function loadJSON() {
 
             function itemRemoveCart(e) {
                 Swal.fire({
-                    title: 'Estás seguro que deseas quitar el producto?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si'
-                  })
-                  .then((result) => {
-                    if (result.isConfirmed) {
-                        const deleteButton = e.target;
-                        const tr = deleteButton.closest(".cart-item");
-                        const title = tr.querySelector(".title").textContent;
+                        title: 'Estás seguro que deseas quitar el producto?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Si'
+                    })
+                    .then((result) => {
+                        if (result.isConfirmed) {
+                            const deleteButton = e.target;
+                            const tr = deleteButton.closest(".cart-item");
+                            const title = tr.querySelector(".title").textContent;
 
-                        for (let i = 0; i < cart.length; i++) {
+                            for (let i = 0; i < cart.length; i++) {
 
-                            if (cart[i].title.trim() === title.trim()) {
-                                cart.splice(i, 1);
+                                if (cart[i].title.trim() === title.trim()) {
+                                    cart.splice(i, 1);
+                                }
                             }
+
+                            tr.remove();
+                            cartTotal();
+
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Prenda eliminada!',
+                                showConfirmButton: false,
+                                timer: 1200
+                            });
                         }
-        
-                        tr.remove();
-                        cartTotal();
-        
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Prenda eliminada!',
-                            showConfirmButton: false,
-                            timer: 1200
-                        });
-                    }
-                  })
+                    })
             }
 
 
@@ -291,7 +291,40 @@ function loadJSON() {
             }
 
 
+            // BOTON DE COMPRA
+
+            const buyBtn = document.querySelector(".button-buy");
+
+            buyBtn.addEventListener("click", buyedAndRemove);
+
+            function buyedAndRemove () {
+                Swal.fire({
+                        title: 'Proceder a la compra',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonText: 'Cancelar',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Si'
+                    })
+                    .then((result) => {
+                        if (result.isConfirmed) {
+
+                            // RESETEO DEL CARRITO
+                            cart = [];
+                            renderCart();
+
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Fin del demo',
+                                text: 'En este punto pasaría a los mmétodos de pago y envío',
+                                showConfirmButton: true,
+                            });
+                        }
+                    })
+                }
         })
+
         .catch(error => {
             Swal.fire({
                 icon: 'error',
