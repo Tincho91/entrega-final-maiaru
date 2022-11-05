@@ -1,0 +1,16 @@
+@use 'custom';
+
+// IMPORTACIÓN DE COMPONENTES
+
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
+
+
+// IMPORTACIÓN DE SECCIONES
+
+@use 'sections/navbar';
+@use 'sections/footer';
+@use 'sections/items';
+@use 'sections/carro';

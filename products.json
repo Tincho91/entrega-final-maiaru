@@ -1,0 +1,73 @@
+[
+    {
+        "title"       : "Musculosa marinera",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "1200",
+        "qtty"        : "39",
+        "gender"      : "male",
+        "img"         : "img/1.png"
+    },
+
+    {
+        "title"       : "Musculosa con volados",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "1300",
+        "qtty"        : "21",
+        "gender"      : "female",
+        "img"         : "img/2.png"
+    },
+
+    {
+        "title"       : "Body gatito",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "850",
+        "qtty"        : "32",
+        "gender"      : "female",
+        "img"         : "img/3.png"
+    },
+
+    {
+        "title"       : "Remera verano",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "1100",
+        "qtty"        : "29",
+        "gender"      : "male",
+        "img"         : "img/4.png"
+    },
+
+    {
+        "title"       : "Body autitos",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "850",
+        "qtty"        : "19",
+        "gender"      : "male",
+        "img"         : "img/5.png"
+    },
+
+    {
+        "title"       : "Conjunto de plush",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "1500",
+        "qtty"        : "12",
+        "gender"      : "female",
+        "img"         : "img/6.png"
+    },
+
+    {
+        "title"       : "Jean azul",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "1500",
+        "qtty"        : "27",
+        "gender"      : "male",
+        "img"         : "img/7.png"
+    },
+
+    {
+        "title"       : "Biker estrellas",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.",
+        "price"       : "1100",
+        "qtty"        : "10",
+        "gender"      : "female",
+        "img"         : "img/8.png"
+    }
+]

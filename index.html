@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript CoderHouse"/>
+  <meta name="keywords" content=""/>
+  <meta name="author" content="Martín Maiarú" />
+  <title>Mini-Proyectos-Coderhouse</title>
+  <script src="assets/sweetalert2/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="assets/sweetalert2/sweetalert2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="filter.css">
+</head>
+
+<body>
+    
+
+  <!-- NAVBAR-->
+
+  <section id="navbar">
+
+    <header class="contaner-fluid bg-dark fixed-top">
+
+      <ul class="container nav nav-pills py-3" id="pills-tab" role="tablist">
+
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" 
+          id="pills-inicio-tab" 
+          data-bs-toggle="pill" 
+          data-bs-target="#pills-inicio" 
+          type="button" 
+          role="tab" 
+          aria-controls="pills-inicio" 
+          aria-selected="false">Home</a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" 
+          id="pills-productos-tab" 
+          data-bs-toggle="pill" 
+          data-bs-target="#pills-productos" 
+          type="button" 
+          role="tab" 
+          aria-controls="pills-productos" 
+          aria-selected="true">Productos</a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" 
+          id="pills-carrito-tab" 
+          data-bs-toggle="pill" 
+          data-bs-target="#pills-carrito" 
+          type="button" 
+          role="tab" 
+          aria-controls="pills-carrito" 
+          aria-selected="false">Carro</a>
+        </li>
+
+      </ul>
+
+    </header>
+
+  </section>
+
+  <!-- SECCIONES -->
+
+  <section class="items-container">
+
+      <div class="tab-content" id="pills-home">
+
+        <!-- HOME -->
+
+        <div class="tab-pane fade container" id="pills-inicio" role="tabpanel" aria-labelledby="pills-inicio-tab">
+
+          <h2 class="text-center">
+            Home
+          </h2>
+
+        </div>
+
+
+        <!-- PRODUCTOS -->
+
+        <div class="tab-pane fade container show active" id="pills-productos" role="tabpanel" aria-labelledby="pills-productos-tab">
+
+          
+          <h2 class="text-center pt-5 pb-4">
+            Productos
+          </h2>
+          <div class="pb-5 d-flex align-items-center">
+            <h5 class="mx-3">Categoría:</h5>
+            <a href="#" class="category-btn-all"><button class="btn btn-success mx-3">Todo</button></a>
+            <a href="#" class="category-btn-male"><button class="btn btn-primary mx-3">Niños</button></a>
+            <a href="#" class="category-btn-female"><button class="btn btn-danger mx-3">Niñas</button></a>
+          </div>
+      
+          
+          <div class="row" id="items-list">
+
+            <!--CONTENIDO DE TABLA DE EJEMPLO PARA JS (placeholder)-->
+            <!--
+            <div class="col d-flex justify-content-center mb-4" category="male">
+              <div class="card shadow mb-2 bg-dark text-light" style="width: 18rem;">
+                <h5 class="card-title p-2 text-center">Musculosa Marinera</h5>
+                <img src="img/1.png" class="card-img bg-light" alt="...">
+                <div class="card-body">
+                  <p class="card-text description text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, culpa.</p>
+                  <h3 class="text-primary text-center py-2">Precio $ <span class="precio">1200</span>.-</h3>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary button">Agregar al Carro</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            -->
+
+          </div>
+
+        </div>
+      
+      
+
+
+        <!-- CARRO -->
+
+        <div class="tab-pane fade container carrito pb-5" id="pills-carrito" role="tabpanel" aria-labelledby="pills-carrito-tab">
+
+          <h2 class="text-center py-5">
+            Carro
+          </h2>
+
+          <div class="container">
+
+            <table class="table table-dark table-striped shadow">
+
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                
+                <!--CONTENIDO DE TABLA DE EJEMPLO PARA JS (placeholder)-->
+                <!--
+                <tr>
+                  <th scope="row">1</th>
+                  <td class="table--producto d-flex">
+                    <img src="img/1.png" alt="">
+                    <h6 class="title">Title</h6>
+                  </td>
+                  <td class="table--precio">
+                    <p>$ 500.-</p>
+                  </td>
+                  <td class="table--cantidad">
+                    <input type="number" min="1" value="1" class="me-3">
+                    <button class="delete btn btn-danger"><i class="fas fa-trash"></i></button>
+                  </td>
+                </tr>
+                -->
+                
+              </tbody>
+
+            </table>
+            
+            <div class="row mx-4 pt-4">
+              <div class="col">
+                <h3 class="cart-total">
+                  Total: $ 0.-
+                </h3>
+              </div>
+              <div class="col d-flex justify-content-end">
+                <button class="btn btn-dark">
+                  Comprar <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+
+            </div>
+        
+
+          </div>
+
+        </div>
+
+      </div>
+
+  </section>
+
+  <section id="footer" class="mt-5">
+
+    <footer class="bg-dark p-3 fixed-bottom">
+      <p class="text-center m-0 text-muted">Mini Ecommerce</p>
+    </footer>
+
+  </section>
+  
+
+  <!-- Jquery -->
+  <script 
+    src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous">
+  </script>
+
+  <!-- BootStrap -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
+    crossorigin="anonymous">
+  </script>
+
+  <!-- WOW ANIMATIONS-->
+  <script src="wow.min.js"></script>
+      <script>
+        new WOW().init();
+  </script>
+
+  <!-- SWEET ALERT -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- MY SCRITP -->
+  <script src="main.js"></script>
+
+
+</body>
+</html>

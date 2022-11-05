@@ -1,0 +1,22 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+#pills-carrito {
+
+    padding-top: 3rem;
+
+    
+
+    img {
+        width: 8rem;
+        object-fit: contain;
+        margin-right: 2rem;
+    }
+
+    input {
+        width: 2.5rem;
+        
+    }
+
+}

@@ -1,0 +1,21 @@
+{
+  "name": "maiaru-portafolio-sass-boostrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:assets/css"
+  },
+  "author": "martin maiaru",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.2",
+    "autoprefixer": "^10.4.8",
+    "bootstrap": "^5.2.0",
+    "postcss-cli": "^10.0.0",
+    "sweetalert2": "^11.6.2"
+  }
+}
